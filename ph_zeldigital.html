@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZELDIGITAL Philippines | Business Consulting & Digital Marketing — Hanzel Lacida</title>
+  <meta name="description" content="Premium business consulting and digital marketing advisory in the Philippines. Led by Hanzel Lacida, delivering strategy-first growth for founders and teams." />
+  <link rel="canonical" href="https://ph.zeldigital.com/" />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ZELDIGITAL Philippines — Business Consulting & Digital Marketing" />
+  <meta property="og:description" content="Strategy-first consulting by Hanzel Lacida for Philippine businesses with U.S.-grade execution." />
+  <meta property="og:url" content="https://ph.zeldigital.com/" />
+  <meta property="og:image" content="https://ph.zeldigital.com/og-banner.jpg" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZELDIGITAL Philippines — Business Consulting & Digital Marketing" />
+  <meta name="twitter:description" content="Premium corporate consulting site for Hanzel Lacida, Digital Marketing Consultant." />
+  <meta name="twitter:image" content="https://ph.zeldigital.com/og-banner.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f7ff',
+              100: '#eaeefe',
+              200: '#cbd7fe',
+              300: '#a9bcfd',
+              400: '#7d97fb',
+              500: '#4f6ff9',
+              600: '#284ef0',
+              700: '#193ed2',
+              800: '#1633a6',
+              900: '#0f276f'
+            },
+            ink: '#0f172a',
+            gold: '#f59e0b'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 6, 23, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Alpine.js for small interactivity -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    /* Hide scrollbars in logo marquee */
+    .no-scrollbar::-webkit-scrollbar{display:none;} .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ZELDIGITAL Philippines",
+    "url": "https://ph.zeldigital.com/",
+    "logo": "https://ph.zeldigital.com/logo.png",
+    "areaServed": ["Philippines", "United States"],
+    "founder": {
+      "@type": "Person",
+      "name": "Hanzel Lacida",
+      "jobTitle": "Digital Marketing Consultant",
+      "url": "https://www.hanslacida.com/"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/hanzlacida/",
+      "https://x.com/zelgoogleads"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PH"
+    }
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Top bar -->
+  <div class="bg-ink text-white text-xs sm:text-sm py-2">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <p class="opacity-80">Philippines HQ · U.S. presence via Wyoming LLC</p>
+      <a href="#contact" class="inline-flex items-center gap-2 group">
+        <span class="opacity-80">Talk to Hanzel</span>
+        <svg class="w-4 h-4 transition -rotate-45 group-hover:rotate-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header x-data="{open:false}" class="sticky top-0 z-50 bg-white/80 backdrop-blur shadow-soft">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-2xl bg-brand-700 text-white grid place-items-center font-semibold">Z</div>
+          <div class="leading-tight">
+            <div class="text-base font-semibold">ZELDIGITAL</div>
+            <div class="text-xs text-slate-500 -mt-0.5">Philippines</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#services" class="hover:text-brand-700">Services</a>
+          <a href="#about" class="hover:text-brand-700">About</a>
+          <a href="#results" class="hover:text-brand-700">Results</a>
+          <a href="#packages" class="hover:text-brand-700">Packages</a>
+          <a href="#faq" class="hover:text-brand-700">FAQ</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" target="_blank" class="px-4 py-2 rounded-xl border border-slate-200 hover:border-brand-600 hover:text-brand-700 transition">10‑min Intro</a>
+          <a href="#contact" class="px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800 transition">Start a Project</a>
+        </div>
+        <button @click="open=!open" class="md:hidden p-2 rounded-xl border border-slate-200" aria-label="Toggle menu">
+          <svg x-show="!open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="open" x-cloak class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div x-show="open" x-cloak class="md:hidden pb-4">
+        <div class="grid gap-2 text-sm">
+          <a @click="open=false" href="#services" class="px-3 py-2 rounded-lg hover:bg-slate-50">Services</a>
+          <a @click="open=false" href="#about" class="px-3 py-2 rounded-lg hover:bg-slate-50">About</a>
+          <a @click="open=false" href="#results" class="px-3 py-2 rounded-lg hover:bg-slate-50">Results</a>
+          <a @click="open=false" href="#packages" class="px-3 py-2 rounded-lg hover:bg-slate-50">Packages</a>
+          <a @click="open=false" href="#faq" class="px-3 py-2 rounded-lg hover:bg-slate-50">FAQ</a>
+          <a @click="open=false" href="#contact" class="px-3 py-2 rounded-lg bg-brand-700 text-white">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-900 via-ink to-ink"></div>
+    <svg class="absolute -top-24 left-1/2 -translate-x-1/2 opacity-25" width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="600" cy="300" r="280" stroke="url(#g)" stroke-width="2" />
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4f6ff9" />
+          <stop offset="100%" stop-color="#f59e0b" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="relative max-w-7xl mx-auto px-4 pt-20 pb-24 text-white">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 ring-1 ring-white/20 text-xs">Premium Consulting for PH Businesses · U.S.-grade Playbooks</span>
+        <h1 class="mt-6 text-3xl sm:text-5xl font-bold leading-tight">Build a Profitable Growth Engine —<br class="hidden sm:block" />with <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-gold">Hanzel Lacida</span></h1>
+        <p class="mt-4 text-white/80 text-base sm:text-lg">I advise owners and in‑house teams on strategy, analytics, and Google Ads — from market entry to scale. Clear plans, clean tracking, accountable execution.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#packages" class="px-5 py-3 rounded-xl bg-white text-ink font-semibold hover:bg-slate-100 shadow-soft">See Packages</a>
+          <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" target="_blank" class="px-5 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10">Book a 10‑min Intro</a>
+        </div>
+        <div class="mt-10 grid grid-cols-2 sm:flex sm:flex-row items-center gap-6 text-white/70 text-sm">
+          <div class="flex items-center gap-3"><span class="text-gold">★</span> 744% ROAS highlight</div>
+          <div class="flex items-center gap-3"><span class="text-gold">★</span> Managed $300k/mo ad spend</div>
+          <div class="flex items-center gap-3"><span class="text-gold">★</span> 50% CPA reduction case</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos / Trust -->
+  <section class="py-10 border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between overflow-x-auto no-scrollbar gap-10 opacity-70">
+        <span class="text-xs">Trusted by founders in PH & US</span>
+        <div class="h-6 w-px bg-slate-200"></div>
+        <div class="flex items-center gap-10 text-sm">
+          <div class="whitespace-nowrap">E‑commerce</div>
+          <div class="whitespace-nowrap">Local Services</div>
+          <div class="whitespace-nowrap">Healthcare</div>
+          <div class="whitespace-nowrap">Retail</div>
+          <div class="whitespace-nowrap">SaaS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">Advisory & Consulting Services</h2>
+        <p class="mt-2 text-slate-600">Strategy-first, measurable, and adapted to Philippine realities with U.S.-level rigor.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="group bg-white rounded-2xl p-6 shadow-soft border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Growth Strategy Blueprint</h3>
+          <p class="mt-2 text-sm text-slate-600">90‑day plan covering positioning, funnel, budget allocation, channels, and KPI targets.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Market & competitor scan (PH + U.S.)</li>
+            <li>Funnel & offer mapping</li>
+            <li>Budget & KPI model</li>
+          </ul>
+        </div>
+        <!-- Card 2 -->
+        <div class="group bg-white rounded-2xl p-6 shadow-soft border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h7"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Analytics & Tracking Fix</h3>
+          <p class="mt-2 text-sm text-slate-600">GA4, GTM, server‑side tagging guidance, and clean attribution for decisions that pay.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Event & conversion schema</li>
+            <li>Cross‑domain + thank‑you tracking</li>
+            <li>Looker Studio scorecards</li>
+          </ul>
+        </div>
+        <!-- Card 3 -->
+        <div class="group bg-white rounded-2xl p-6 shadow-soft border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 grid place-items-center">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M6 20V4M18 20v-6"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Google Ads Advisory</h3>
+          <p class="mt-2 text-sm text-slate-600">Architecture, smart bidding, and scale playbooks. Fix misrepresentation & Merchant Center issues.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Account audit & rebuild plan</li>
+            <li>Keyword, audience, creative testing</li>
+            <li>90‑day scaling roadmap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Hanzel -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">Meet Your Consultant — Hanzel Lacida</h2>
+        <p class="mt-3 text-slate-600">Over 10 years driving measurable growth across e‑commerce, healthcare, retail, and local services. Built U.S. presence via a Wyoming LLC while serving Philippine brands with world‑class rigor.</p>
+        <ul class="mt-6 space-y-3 text-sm text-slate-700">
+          <li class="flex gap-3"><span class="text-gold">◆</span> 744% ROAS highlight; 50% lower CPA in service vertical</li>
+          <li class="flex gap-3"><span class="text-gold">◆</span> Managed up to $300k/month ad spend</li>
+          <li class="flex gap-3"><span class="text-gold">◆</span> Google Merchant Center misrepresentation fix specialist</li>
+        </ul>
+        <div class="mt-8 flex gap-3">
+          <a href="#results" class="px-5 py-3 rounded-xl bg-brand-700 text-white hover:bg-brand-800">See Results</a>
+          <a href="https://www.hanslacida.com/about/achievements/" target="_blank" class="px-5 py-3 rounded-xl border border-slate-200 hover:border-brand-600">Achievements</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-3xl bg-gradient-to-br from-brand-600 to-gold p-1 shadow-soft">
+          <div class="rounded-3xl bg-white p-6">
+            <div class="aspect-[4/3] rounded-2xl bg-slate-100 grid place-items-center text-slate-400 text-sm">Portrait / Brand Image Placeholder</div>
+            <div class="mt-4 text-sm text-slate-600">Prefer a custom photo? Replace the placeholder with a professional shot and your logo lockup.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">Select Wins</h2>
+        <p class="mt-2 text-slate-600">Performance snapshots from consulting and advisory work.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow-soft border border-slate-100">
+          <div class="text-3xl font-bold">744%</div>
+          <div class="text-slate-500">ROAS in e‑commerce highlight</div>
+          <p class="mt-3 text-sm text-slate-600">Achieved with audience segmentation, bid strategy tuning, and landing page alignment.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft border border-slate-100">
+          <div class="text-3xl font-bold">50%</div>
+          <div class="text-slate-500">CPA reduction</div>
+          <p class="mt-3 text-sm text-slate-600">Cut wasted spend via search term control, negative lists, and conversion cleanup.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft border border-slate-100">
+          <div class="text-3xl font-bold">$300k/mo</div>
+          <div class="text-slate-500">Managed ad spend</div>
+          <p class="mt-3 text-sm text-slate-600">Scaled while protecting MER with disciplined testing and creative refresh cycles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">Consulting Packages</h2>
+        <p class="mt-2 text-slate-600">Simple, transparent advisory built for founders and lean teams.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Starter -->
+        <div class="relative bg-white rounded-2xl p-6 border border-slate-100 shadow-soft">
+          <div class="text-xs font-medium text-brand-700">Starter</div>
+          <div class="mt-2 text-3xl font-bold">₱35,000<span class="text-base font-normal text-slate-500"> / month</span></div>
+          <p class="mt-2 text-sm text-slate-600">Best for new brands validating fit.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>2 strategy calls / month</li>
+            <li>GA4/GTM review</li>
+            <li>Google Ads advisories</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Get Started</a>
+        </div>
+        <!-- Pro -->
+        <div class="relative bg-white rounded-2xl p-6 border-2 border-brand-700 shadow-soft">
+          <div class="absolute -top-3 right-4 text-[11px] uppercase tracking-wide bg-gold text-ink px-2 py-1 rounded-md font-semibold">Most Popular</div>
+          <div class="text-xs font-medium text-brand-700">Pro Advisory</div>
+          <div class="mt-2 text-3xl font-bold">₱65,000<span class="text-base font-normal text-slate-500"> / month</span></div>
+          <p class="mt-2 text-sm text-slate-600">Ongoing, hands‑on guidance with faster iteration.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>4 strategy calls / month</li>
+            <li>Tracking & attribution roadmap</li>
+            <li>Campaign architecture & testing plan</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Apply Now</a>
+        </div>
+        <!-- Intensive -->
+        <div class="relative bg-white rounded-2xl p-6 border border-slate-100 shadow-soft">
+          <div class="text-xs font-medium text-brand-700">Executive Intensive</div>
+          <div class="mt-2 text-3xl font-bold">₱120,000<span class="text-base font-normal text-slate-500"> / 2 weeks</span></div>
+          <p class="mt-2 text-sm text-slate-600">Compressed, outcome‑driven sprint for teams.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+            <li>Audit → plan → implementation support</li>
+            <li>Team training & SOPs</li>
+            <li>90‑day scaling roadmap</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Schedule Intensive</a>
+        </div>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">*Custom retainers available for U.S. entities. Pricing excludes VAT if applicable.</p>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-700 via-brand-800 to-ink p-8 md:p-12 text-white shadow-soft">
+        <div class="max-w-2xl">
+          <h3 class="text-2xl font-semibold">Not another agency. A senior partner in your corner.</h3>
+          <p class="mt-2 text-white/80">Let’s align your offers, tracking, and ads to real business outcomes.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#contact" class="px-5 py-3 rounded-xl bg-white text-ink font-semibold hover:bg-slate-100">Start a Project</a>
+            <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" target="_blank" class="px-5 py-3 rounded-xl border border-white/30 hover:bg-white/10">10‑min Intro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">FAQs</h2>
+        <p class="mt-2 text-slate-600">Quick answers to common questions.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <details class="group bg-white rounded-2xl p-6 border border-slate-100 shadow-soft">
+          <summary class="flex items-center justify-between cursor-pointer">
+            <span class="font-medium">Do you execute campaigns or only advise?</span>
+            <svg class="w-5 h-5 text-slate-400 group-open:rotate-45 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 12h16"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Primary model is advisory with hands‑on guidance. Execution can be scoped with your team or trusted partners.</p>
+        </details>
+        <details class="group bg-white rounded-2xl p-6 border border-slate-100 shadow-soft">
+          <summary class="flex items-center justify-between cursor-pointer">
+            <span class="font-medium">Do you work with U.S. businesses?</span>
+            <svg class="w-5 h-5 text-slate-400 group-open:rotate-45 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 12h16"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Yes — ZELDIGITAL maintains a U.S. presence via a Wyoming LLC. Billing can be PH or U.S. as needed.</p>
+        </details>
+        <details class="group bg-white rounded-2xl p-6 border border-slate-100 shadow-soft">
+          <summary class="flex items-center justify-between cursor-pointer">
+            <span class="font-medium">What industries do you specialize in?</span>
+            <svg class="w-5 h-5 text-slate-400 group-open:rotate-45 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 12h16"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">E‑commerce, healthcare, retail, local services, and SaaS — with playbooks tailored to each.</p>
+        </details>
+        <details class="group bg-white rounded-2xl p-6 border border-slate-100 shadow-soft">
+          <summary class="flex items-center justify-between cursor-pointer">
+            <span class="font-medium">Is there a contract?</span>
+            <svg class="w-5 h-5 text-slate-400 group-open:rotate-45 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M4 12h16"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Monthly packages are cancel‑anytime. Intensives are fixed‑scope. NDAs and recording terms available on request.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">Start a Project</h2>
+        <p class="mt-2 text-slate-600">Tell me about your goals. I’ll reply within 1–2 business days.</p>
+        <div class="mt-6 rounded-2xl border border-slate-200 p-6">
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="grid gap-4">
+              <div>
+                <label class="text-sm text-slate-600">Full Name</label>
+                <input required name="name" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600" />
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="text-sm text-slate-600">Email</label>
+                  <input required type="email" name="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600" />
+                </div>
+                <div>
+                  <label class="text-sm text-slate-600">Company</label>
+                  <input name="company" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600" />
+                </div>
+              </div>
+              <div>
+                <label class="text-sm text-slate-600">What do you need help with?</label>
+                <select name="need" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600">
+                  <option>Growth Strategy Blueprint</option>
+                  <option>Analytics & Tracking Fix</option>
+                  <option>Google Ads Advisory</option>
+                  <option>Executive Intensive</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm text-slate-600">Message</label>
+                <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-600"></textarea>
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="px-5 py-3 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Send Message</button>
+                <a href="mailto:hanz@zeldigital.com" class="text-sm text-slate-600 hover:text-brand-700">or email hanz@zeldigital.com</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+        <h3 class="font-semibold">What to expect</h3>
+        <ul class="mt-3 space-y-3 text-sm text-slate-700">
+          <li class="flex gap-3"><span class="text-gold">•</span> Quick discovery to confirm fit</li>
+          <li class="flex gap-3"><span class="text-gold">•</span> Clear scope, timeline, and outcomes</li>
+          <li class="flex gap-3"><span class="text-gold">•</span> Transparent pricing and billing (PH or U.S.)</li>
+        </ul>
+        <div class="mt-6 p-4 rounded-xl bg-white border border-slate-200">
+          <div class="text-sm text-slate-600">Prefer a quick chat?</div>
+          <a href="https://tidycal.com/hanslacida/10-private-strategy-session-with-hans" target="_blank" class="mt-1 inline-flex items-center gap-2 text-brand-700 hover:underline">Book a 10‑min intro <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 py-10">
+    <div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-2xl bg-brand-700 text-white grid place-items-center font-semibold">Z</div>
+          <div class="text-lg font-semibold">ZELDIGITAL</div>
+        </div>
+        <p class="mt-3 text-slate-600">Strategy‑first business consulting & digital marketing advisory for the Philippines.</p>
+      </div>
+      <div>
+        <div class="font-semibold">Company</div>
+        <ul class="mt-3 space-y-2 text-slate-600">
+          <li><a href="#about" class="hover:text-brand-700">About</a></li>
+          <li><a href="#services" class="hover:text-brand-700">Services</a></li>
+          <li><a href="#packages" class="hover:text-brand-700">Packages</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Legal</div>
+        <ul class="mt-3 space-y-2 text-slate-600">
+          <li><a href="#" class="hover:text-brand-700">Terms</a></li>
+          <li><a href="#" class="hover:text-brand-700">Privacy</a></li>
+          <li><a href="#" class="hover:text-brand-700">NDA on request</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">Contact</div>
+        <ul class="mt-3 space-y-2 text-slate-600">
+          <li>Email: <a href="mailto:hanz@zeldigital.com" class="hover:text-brand-700">hanz@zeldigital.com</a></li>
+          <li>Phone/WhatsApp: <a href="tel:+639" class="hover:text-brand-700">+63 9xx xxx xxxx</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/hanzlacida/" target="_blank" class="hover:text-brand-700">/in/hanzlacida</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-6 text-center text-xs text-slate-500">© <span id="y"></span> ZELDIGITAL. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
