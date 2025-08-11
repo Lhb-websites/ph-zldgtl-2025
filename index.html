@@ -65,7 +65,7 @@
     "areaServed": ["Philippines", "United States"],
     "founder": {
       "@type": "Person",
-      "name": "Hanzel Lacida",
+      "name": "Hans Lacida",
       "jobTitle": "Digital Marketing Consultant",
       "url": "https://www.hanslacida.com/"
     },
@@ -86,7 +86,7 @@
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
       <p class="opacity-80">Philippines HQ · U.S. presence via Wyoming LLC</p>
       <a href="#contact" class="inline-flex items-center gap-2 group">
-        <span class="opacity-80">Talk to Hanzel</span>
+        <span class="opacity-80">Talk to Hans</span>
         <svg class="w-4 h-4 transition -rotate-45 group-hover:rotate-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
       </a>
     </div>
@@ -250,7 +250,7 @@
         <div class="rounded-3xl bg-gradient-to-br from-brand-600 to-gold p-1 shadow-soft">
           <div class="rounded-3xl bg-white p-6">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100">
-              <img src="https://i.ibb.co/dJBgjwkx/hel-profile.png" alt="Portrait of Hanzel Lacida" class="w-full h-full object-cover" />
+              <img src="https://i.ibb.co/dJBgjwkx/hel-profile.png" alt="Portrait of Hans Lacida" class="w-full h-full object-cover" />
             </div>
             <div class="mt-4 text-sm text-slate-600">Portrait of Hans Lacida — also known as Hans Media Buyer / PPC Hans.</div>
           </div>
@@ -476,6 +476,7 @@
         <ul class="mt-3 space-y-2 text-slate-600">
           <li><a href="./terms.html" class="hover:text-brand-700">Terms</a></li>
           <li><a href="./privacy.html" class="hover:text-brand-700">Privacy</a></li>
+          <li><a href="./accessibility.html" class="hover:text-brand-700">Accessibility</a></li>
           <li><a href="#" class="hover:text-brand-700">NDA on request</a></li>
         </ul>
       </div>
@@ -483,7 +484,7 @@
         <div class="font-semibold">Contact</div>
         <ul class="mt-3 space-y-2 text-slate-600">
           <li>Email: <a href="mailto:hanz@zeldigital.com" class="hover:text-brand-700">hanz@zeldigital.com</a></li>
-          <li>Phone/WhatsApp: <a href="tel:+639" class="hover:text-brand-700">+63 976 105 3409</a></li>
+          <li>Phone/WhatsApp: <a href="tel:+639761053409" class="hover:text-brand-700">+63 976 105 3409</a></li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/hanslacida/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-700">/in/hanslacida</a></li>
         </ul>
       </div>
@@ -491,8 +492,40 @@
     <div class="mt-6 text-center text-xs text-slate-500">© <span id="y"></span> ZELDIGITAL. All rights reserved.</div>
   </footer>
 
+  <!-- Cookie / Consent Banner -->
+  <div id="consent-banner" class="fixed inset-x-0 bottom-0 z-50 hidden">
+    <div class="max-w-7xl mx-auto px-4 pb-4">
+      <div class="rounded-2xl bg-white shadow-soft border border-slate-200 p-4 md:p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <p class="text-sm text-slate-700">We use cookies and similar technologies for site performance, analytics, and to improve our services. See our <a href="./privacy.html" class="text-brand-700 underline">Privacy Policy</a>.</p>
+        <div class="flex gap-2">
+          <button id="consent-decline" class="px-3 py-2 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50">Decline</button>
+          <button id="consent-accept" class="px-3 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Accept</button>
+          <a href="./privacy.html#manage-preferences" class="px-3 py-2 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50">Preferences</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    // Simple consent banner logic
+    (function(){
+      try {
+        const key = 'zd_consent_v1';
+        const banner = document.getElementById('consent-banner');
+        const accept = document.getElementById('consent-accept');
+        const decline = document.getElementById('consent-decline');
+        const stored = localStorage.getItem(key);
+        if(!stored) banner.classList.remove('hidden');
+        function setConsent(value){
+          localStorage.setItem(key, JSON.stringify({ value, ts: Date.now() }));
+          banner.classList.add('hidden');
+          // TODO: Initialize analytics only if value === 'accept'
+        }
+        accept && accept.addEventListener('click', function(){ setConsent('accept'); });
+        decline && decline.addEventListener('click', function(){ setConsent('decline'); });
+      } catch(e) {}
+    })();
   </script>
 </body>
 </html>
